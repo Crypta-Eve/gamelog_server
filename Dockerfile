@@ -2,7 +2,7 @@ FROM golang:1.18-alpine as builder
 LABEL maintainer="Crypta Electrica <crypta@crypta.tech>"
 RUN apk update && apk add alpine-sdk git && rm -rf /var/cache/apk/*
 RUN mkdir /build
-RUN git clone https://github.com/Crypta-Eve/gamelog_server /build
+COPY . /build
 WORKDIR /build
 ENV GO111MODULE on
 ENV GOPROXY https://proxy.golang.org
