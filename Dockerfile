@@ -6,7 +6,7 @@ RUN git clone https://github.com/Crypta-Eve/gamelog_server /build
 WORKDIR /build
 ENV GO111MODULE on
 ENV GOPROXY https://proxy.golang.org
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o main main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o main .
 
 
 FROM alpine
