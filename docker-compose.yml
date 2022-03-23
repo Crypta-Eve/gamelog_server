@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  server:
+    build: .
+    container_name: gamelog_server
+    restart: unless-stopped
